@@ -1,0 +1,111 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size: 16px;
+    background: #00D3E6;
+}
+
+.gameWrapper{
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+  
+}
+.ticktackBox{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 300px;
+    width: 100%;
+    height: 300px;
+    background: #005E7C;
+}
+.eachTicktacbox{
+    width: 33.333333%;
+    height: 100px;
+    border: 1px solid #00B4CC;
+    position: relative;
+    color: #fff;
+}
+.innrTictack{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.innrTictack img{
+    width: 65px;
+    -webkit-animation-name: imgAnimate; 
+    -webkit-animation-duration: 200ms; 
+    animation-name: imgAnimate;
+    animation-duration: 200ms;
+}
+.innrTictack img.bigger{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+.relative{
+    position: relative;
+}
+.winner{
+    font-size: 40px;
+    position: absolute;
+    width: 100%;
+    top:100%;
+    left: 0;
+    text-align: center;
+    color: #005E7C;    
+}
+.winnerLine{
+    width: 10px;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.tic-tac-sect{
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+/* 
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 4s; 
+    animation-name: example;
+    animation-duration: 4s;
+  } */
+  
+
+  @-webkit-keyframes imgAnimate {
+    0% {
+       transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+  
+  /* Standard syntax */
+  @keyframes imgAnimate {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
